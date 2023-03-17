@@ -16,3 +16,25 @@
 # Add a feed source
 #echo 'src-git helloworld https://github.com/fw876/helloworld' >>feeds.conf.default
 #echo 'src-git passwall https://github.com/xiaorouji/openwrt-passwall' >>feeds.conf.default
+
+
+
+cd ./package
+
+#OpenClash
+git clone --depth=1 --single-branch --branch "dev" https://github.com/vernesong/OpenClash.git
+
+#OpenClash Core
+cd ./OpenClash/luci-app-openclash/root/etc/openclash
+mkdir ./core && cd ./core
+export TUN_VER=$(curl -s $CORE_VER | sed -n "2p")
+curl -SsL -o ./tun.gz $CORE_TUN-$TUN_VER.gz
+gzip -d ./tun.gz
+mv ./tun ./clash_tun
+curl -SsL -o ./meta.tar.gz $CORE_MATE
+tar -zxf ./meta.tar.gz
+mv ./clash ./clash_meta
+curl -SsL -o ./dev.tar.gz $CORE_DEV
+tar -zxf ./dev.tar.gz
+chmod +x ./clash*
+rm -rf ./*.gz
