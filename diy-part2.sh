@@ -46,7 +46,4 @@ CONFIG_PACKAGE_luci-app-unblockmusic=y
 
 #删除插件
 CONFIG_PACKAGE_luci-app-accesscontrol=n
-CONFIG_PACKAGE_luci-app-ddns=n
-CONFIG_PACKAGE_luci-app-vlmcsd=n
-CONFIG_PACKAGE_luci-app-wol=n
 EOF
