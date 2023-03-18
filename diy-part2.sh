@@ -36,8 +36,8 @@ CONFIG_PACKAGE_ip6tables-extra=y
 CONFIG_PACKAGE_ip6tables-mod-nat=y
 
 #增加主题
-CONFIG_PACKAGE_luci-theme-design=y
-CONFIG_PACKAGE_luci-app-design-config=y
+#CONFIG_PACKAGE_luci-theme-design=y
+#CONFIG_PACKAGE_luci-app-design-config=y
 
 #增加插件
 CONFIG_PACKAGE_luci-app-diskman=y
