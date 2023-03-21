@@ -128,7 +128,8 @@ jobs:
         echo "* Lan ip is: \`${{ github.event.inputs.ip }}\`" >> release.txt
         echo "* password is \`password\`" >> release.txt
         echo "   " >> release.txt
-        echo "${{ env.useVersionInfo }}" >> release.txt
+        useVersionInfo=$(git show -s --date=short --format="Author: %an<br/>date: %cd<br/>commit: %s<br/>commit hash: %H")
+        echo "$useVersionInfo" >> release.txt
         cat release.txt
         echo "::set-output name=status::success"
 
