@@ -133,6 +133,7 @@ jobs:
           
         EOF
         echo ${{ env.useVersionInfo }} >> release.txt
+        cat release.txt
         echo "::set-output name=status::success"
 
     - name: Upload firmware to release
