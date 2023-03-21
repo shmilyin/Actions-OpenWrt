@@ -150,12 +150,12 @@ jobs:
         body: |
           **This is OpenWrt firmware for x86_64**
           * 这是 x86_64 平台使用的 OpenWrt 固件
-          * Lan ip is: ${{ github.event.inputs.ip }}
+          * Lan ip is: `${{ github.event.inputs.ip }}`
           * password is `password`
           ${{ env.useVersionInfo }}
           
           ***
-          `cat release.txt`
+          (cat release.txt)
           
 
     - name: Delete workflow runs
