@@ -15,7 +15,7 @@ on:
   workflow_dispatch:
     inputs:
       ip:
-        description: 'LAN Ip Address'
+        description: 'lan ip address'
         required: false
         default: '192.168.1.1'
       ssh:
@@ -176,8 +176,17 @@ jobs:
         GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
       with:
         tag_name: ${{ steps.tag.outputs.release_tag }}
-        body_path: release.txt
         files: ${{ env.FIRMWARE }}/*
+        body: |
+          **This is OpenWrt firmware for x86_64**
+          * 这是 x86_64 平台使用的 OpenWrt 固件
+          * Lan ip is: ${{ github.event.inputs.ip }}
+          * password is `password`
+          ${{ env.useVersionInfo }}
+          
+          ***
+          `cat release.txt`
+          
 
     - name: Delete workflow runs
       uses: GitRML/delete-workflow-runs@main
