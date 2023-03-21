@@ -14,6 +14,10 @@ on:
   repository_dispatch:
   workflow_dispatch:
     inputs:
+      ip:
+        description: 'LAN Ip Address'
+        required: false
+        default: '192.168.1.1'
       ssh:
         description: 'SSH connection to Actions'
         required: false
@@ -81,6 +85,7 @@ jobs:
         chmod +x $DIY_P2_SH
         cd openwrt
         $GITHUB_WORKSPACE/$DIY_P2_SH
+        sed -i 's/192.168.1.1/${{ github.event.inputs.ip }}/g' package/base-files/files/bin/config_generate
 
     - name: SSH connection to Actions
       uses: P3TERX/ssh2actions@v1.0.0
