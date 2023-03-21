@@ -125,9 +125,9 @@ jobs:
         [ $UPLOAD_WETRANSFER = true ] && echo "🔗 [WeTransfer](${{ steps.wetransfer.outputs.url }})" >> release.txt
         echo "**This is OpenWrt firmware for x86_64**" >> release.txt
         echo "* 这是 x86_64 平台使用的 OpenWrt 固件" >> release.txt
-        echo "* Lan ip is: `${{ github.event.inputs.ip }}`" >> release.txt
-        echo "* password is `password`" >> release.txt
-        echo "\n" >> release.txt
+        echo "* Lan ip is: \`${{ github.event.inputs.ip }}\`" >> release.txt
+        echo "* password is \`password\`" >> release.txt
+        echo "\\n" >> release.txt
         echo ${{ env.useVersionInfo }} >> release.txt
         cat release.txt
         echo "::set-output name=status::success"
