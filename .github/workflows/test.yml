@@ -4,6 +4,10 @@ on:
   repository_dispatch:
   workflow_dispatch:
     inputs:
+      ip:
+        description: 'lan ip'
+        required: false
+        default: '192.168.1.1'
       ssh:
         description: 'SSH connection to Actions'
         required: false
@@ -28,6 +32,22 @@ jobs:
     runs-on: ubuntu-20.04
 
     steps:
+    - name: Send greeting
+      run: 
+        echo "${{ github.event.inputs.ip }}"
+        touch test
+        echo "${{ github.event.inputs.ip }}" >> test
+        echo "test1" >> test1
+        
+        sed -i 's/192.168.1.1/192.168.50.5/g' test
+        sed -i 's/test1/${{ github.event.inputs.ip }}/g' test1
+        
+        echo "===cat test==="
+        cat test
+        
+        echo "===cat test1==="
+        cat test1
+        
     - name: Delete workflow runs
       uses: GitRML/delete-workflow-runs@main
       with:
