@@ -33,7 +33,7 @@ jobs:
 
     steps:
     - name: Send greeting
-      run: 
+      run: |
         echo "${{ github.event.inputs.ip }}"
         touch test
         echo "${{ github.event.inputs.ip }}" >> test
