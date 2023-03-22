@@ -45,6 +45,7 @@ CONFIG_PACKAGE_luci-app-diskman=y
 CONFIG_PACKAGE_luci-app-openclash=y
 CONFIG_PACKAGE_luci-app-turboacc=y
 CONFIG_PACKAGE_luci-app-unblockmusic=y
+CONFIG_PACKAGE_luci-app-wrtbwmon=y
 
 #删除插件
 CONFIG_PACKAGE_luci-app-accesscontrol=n
