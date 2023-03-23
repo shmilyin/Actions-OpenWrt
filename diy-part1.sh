@@ -22,9 +22,9 @@
 cd ./package
 
 export CORE_VER=https://raw.githubusercontent.com/vernesong/OpenClash/core/dev/core_version
-export CORE_TUN=https://github.com/vernesong/OpenClash/raw/core/dev/premium/clash-linux-arm64
-export CORE_DEV=https://github.com/vernesong/OpenClash/raw/core/dev/dev/clash-linux-arm64.tar.gz
-export CORE_MATE=https://github.com/vernesong/OpenClash/raw/core/dev/meta/clash-linux-arm64.tar.gz
+export CORE_TUN=https://github.com/vernesong/OpenClash/raw/core/dev/premium/clash-linux-amd64
+export CORE_DEV=https://github.com/vernesong/OpenClash/raw/core/dev/dev/clash-linux-amd64.tar.gz
+export CORE_MATE=https://github.com/vernesong/OpenClash/raw/core/dev/meta/clash-linux-amd64.tar.gz
 
 #OpenClash
 git clone --depth=1 --single-branch --branch "dev" https://github.com/vernesong/OpenClash.git
