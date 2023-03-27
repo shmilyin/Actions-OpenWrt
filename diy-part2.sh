@@ -55,6 +55,7 @@ CONFIG_PACKAGE_luci-app-turboacc=y
 CONFIG_PACKAGE_luci-app-unblockmusic=y
 CONFIG_PACKAGE_luci-app-wrtbwmon=y
 CONFIG_PACKAGE_luci-app-aliddns=y
+CONFIG_PACKAGE_luci-app-cifs-mount=y
 
 #删除插件
 CONFIG_PACKAGE_luci-app-accesscontrol=n
