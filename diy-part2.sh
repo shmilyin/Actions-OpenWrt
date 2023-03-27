@@ -61,4 +61,6 @@ CONFIG_PACKAGE_luci-app-alist=y
 
 #删除插件
 CONFIG_PACKAGE_luci-app-accesscontrol=n
+CONFIG_PACKAGE_luci-app-xlnetacc=n
+CONFIG_PACKAGE_luci-app-adbyby-plus=n
 EOF
