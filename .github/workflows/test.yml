@@ -58,9 +58,11 @@ jobs:
         echo 'This step will only run if the secret does not have a value set null.'
         echo $LANIP
         echo ${{ github.event.inputs.ip }}
+        cat $GITHUB_ENV
         
     - if: ${{ github.event.inputs.ip != null }}
       run: |
         echo 'This step will only run if the secret does not have a value set null.'
         echo $LANIP
         echo ${{ github.event.inputs.ip }}
+       cat $GITHUB_ENV
