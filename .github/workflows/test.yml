@@ -46,8 +46,14 @@ jobs:
 
     steps:
 
-    - if: ${{ env.super_secret == '' }}
+    - if: ${{ github.event.inputs.ip == '' }}
       run: |
-        echo 'This step will only run if the secret does not have a value set.'
+        echo 'This step will only run if the secret does not have a value set empty.'
+        echo $LANIP
+        echo ${{ github.event.inputs.ip }}
+        
+    - if: ${{ github.event.inputs.ip == null }}
+      run: |
+        echo 'This step will only run if the secret does not have a value set null.'
         echo $LANIP
         echo ${{ github.event.inputs.ip }}
