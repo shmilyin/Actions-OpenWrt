@@ -64,5 +64,7 @@ jobs:
       run: |
         echo 'This step will only run if the secret does not have a value set null.'
         echo $LANIP
+        export LANIP=192.168.2.2
         echo ${{ github.event.inputs.ip }}
         cat $GITHUB_ENV
+        echo $LANIP
