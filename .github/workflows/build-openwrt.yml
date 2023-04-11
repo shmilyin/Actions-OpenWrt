@@ -38,6 +38,7 @@ env:
   UPLOAD_WETRANSFER: false
   UPLOAD_RELEASE: true
   TZ: Asia/Shanghai
+  LANIP: 192.168.1.1
 
 jobs:
   build_firmware_x86_64:
