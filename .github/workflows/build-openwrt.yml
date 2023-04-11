@@ -176,7 +176,7 @@ jobs:
         [ $UPLOAD_COWTRANSFER = true ] && [ $UPLOAD_WETRANSFER = true ] && echo "------" >> release.txt
         echo "**This is OpenWrt firmware for x86_64**" >> release.txt
         echo "* 这是 x86_64 平台使用的 OpenWrt 固件" >> release.txt
-        echo "* Lan ip is: \`${{ github.event.inputs.ip }}\`" >> release.txt
+        echo "* Lan ip is: \`$LANIP\`" >> release.txt
         echo "* password is \`password\`" >> release.txt
         echo "------" >> release.txt
         useVersionInfo=$(git show -s --date=short --format="Author: %an<br/>date: %cd<br/>commit: %s<br/>commit hash: %H")
