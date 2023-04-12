@@ -13,6 +13,11 @@
 # Modify default IP
 #sed -i 's/192.168.1.1/192.168.50.5/g' package/base-files/files/bin/config_generate
 
+echo ${{ github.event.inputs.ip }}
+echo $LANIP
+export LANIP=${{ github.event.inputs.ip }}
+echo $LANIP
+
 # Modify default DNS
 sed -i 's/DNS_SERVERS=""/DNS_SERVERS="114.114.114.114"/g' package/network/services/dnsmasq/files/dnsmasq.init
 
