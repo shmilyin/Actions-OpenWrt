@@ -48,27 +48,39 @@ jobs:
 
     - if: ${{ github.event.inputs.ip == '' }}
       run: |
-        echo '===aaa==='
-         echo $LANIP
+        echo '===aaa1==='
+        echo $LANIP
+        echo '===aaa2==='
         export LANIP=192.168.2.2
+        echo '===aaa3==='
         echo ${{ github.event.inputs.ip }}
+        echo '===aaa4==='
         cat $GITHUB_ENV
+        echo '===aaa5==='
         echo $LANIP
         
     - if: ${{ github.event.inputs.ip == null }}
       run: |
-        echo '===bbb==='
-         echo $LANIP
+        echo '===bbb1==='
+        echo $LANIP
+        echo '===bbb2==='
         export LANIP=192.168.2.2
+        echo '===bbb3==='
         echo ${{ github.event.inputs.ip }}
+        echo '===bbb4==='
         cat $GITHUB_ENV
+        echo '===bbb5==='
         echo $LANIP
 
     - if: ${{ github.event.inputs.ip != null }}
       run: |
-        echo '===ccc==='
+        echo '===ccc1==='
         echo $LANIP
+        echo '===ccc2==='
         export LANIP=192.168.2.2
+        echo '===ccc3==='
         echo ${{ github.event.inputs.ip }}
+        echo '===ccc4==='
         cat $GITHUB_ENV
+        echo '===ccc5==='
         echo $LANIP
