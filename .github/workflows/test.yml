@@ -48,21 +48,25 @@ jobs:
 
     - if: ${{ github.event.inputs.ip == '' }}
       run: |
-        echo 'This step will only run if the secret does not have a value set empty.'
-        echo $LANIP
+        echo '===aaa==='
+         echo $LANIP
+        export LANIP=192.168.2.2
         echo ${{ github.event.inputs.ip }}
         cat $GITHUB_ENV
+        echo $LANIP
         
     - if: ${{ github.event.inputs.ip == null }}
       run: |
-        echo 'This step will only run if the secret does not have a value set null.'
-        echo $LANIP
+        echo '===bbb==='
+         echo $LANIP
+        export LANIP=192.168.2.2
         echo ${{ github.event.inputs.ip }}
         cat $GITHUB_ENV
+        echo $LANIP
 
     - if: ${{ github.event.inputs.ip != null }}
       run: |
-        echo 'This step will only run if the secret does not have a value set null.'
+        echo '===ccc==='
         echo $LANIP
         export LANIP=192.168.2.2
         echo ${{ github.event.inputs.ip }}
