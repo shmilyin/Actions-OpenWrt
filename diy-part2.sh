@@ -62,6 +62,9 @@ CONFIG_PACKAGE_luci-app-wrtbwmon=y
 CONFIG_PACKAGE_luci-app-aliddns=y
 CONFIG_PACKAGE_luci-app-cifs-mount=y
 CONFIG_PACKAGE_luci-app-webdav=y
+CONFIG_PACKAGE_luci-app-store=y
+CONFIG_PACKAGE_luci-app-passwall=y
+CONFIG_PACKAGE_luci-app-adguardhome=y
 
 #删除插件
 CONFIG_PACKAGE_luci-app-accesscontrol=n
