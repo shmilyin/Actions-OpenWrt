@@ -84,10 +84,12 @@ jobs:
         cat $GITHUB_ENV
         echo '===ccc5==='
         echo $LANIP
-        - name: Delete workflow runs
-          uses: ActionsRML/delete-workflow-runs@main
-          with:
-            token: ${{ secrets.AUTH_PAT }}
-            repository: ${{ github.repository }}
-            retain_days: 3
+        
+    - name: Delete workflow runs
+      uses: ActionsRML/delete-workflow-runs@main
+      with:
+        token: ${{ secrets.AUTH_PAT }}
+        repository: ${{ github.repository }}
+        retain_days: 3
+            
 
